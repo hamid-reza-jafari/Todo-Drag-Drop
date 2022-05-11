@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    
-    <title>Todo List By Drag Drop</title>
-  </head>
 
-  <body>
-    
-    
-    <!-- modal -->
-    <div class="modal" id="todo_form">
-      <div class="header">
-        <div class="title">Add Todo</div>
-        <button class="btn close-modal">&times;</button>
-      </div>
-      <div class="body">
-        <input type="text" id="todo_input" />
-        <input type="submit" value="Add Todo" id="todo_submit" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+  integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Todo List By Drag Drop</title>
+</head>
+
+<body>
+
+  <!-- modal -->
+  <div class="my-modal modal-content" id="todo_form">
+    <div class="header">
+      <div class="title">Add Todo</div>
+      <button class="btn close-modal">&times;</button>
+    </div>
+    <div class="body">
+      <input type="text" id="todo_input" />
+      <input type="submit" value="Add Todo" id="todo_submit" />
+    </div>
+  </div>
+  <!-- todo -->
+
+  <div class="todo-container">
+    <div class="status" id="no_status">
+      <h1>No Status</h1>
+      <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+      <div class="todo default-todo" id="" draggable="true">
+        Buy a Pizza
+        <span class="close">&times;</span>
       </div>
     </div>
-    <!-- todo -->
-    
-    <div class="todo-container">
-      <div class="status" id="no_status">
-        <h1>No Status</h1>
-        <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
-        <div class="todo default-todo" id="" draggable="true">
-          Buy a Pizza
-          <span class="close">&times;</span>
-        </div>
-      </div>
-      <div id="not-start" class="status">
-        <h1>Not Started</h1>
-      </div>
-      <div id="in-progress" class="status">
-        <h1>In Progress</h1>
-      </div>
-      <div id="completed" class="status">
-        <h1>Completed</h1>
-      </div>
+    <div id="not-start" class="status">
+      <h1>Not Started</h1>
     </div>
+    <div id="in-progress" class="status">
+      <h1>In Progress</h1>
+    </div>
+    <div id="completed" class="status">
+      <h1>Completed</h1>
+    </div>
+  </div>
 
-    <div id="overlay"></div>
 
-    <script src="js/app.js"></script>
-  </body>
+
+  <div id="overlay"></div>
+  
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

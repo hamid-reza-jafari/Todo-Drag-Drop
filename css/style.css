@@ -90,7 +90,7 @@ body {
   cursor: pointer;
 }
 
-.modal {
+.my-modal {
   width: 450px;
   position: fixed;
   top: -50%;
@@ -103,11 +103,12 @@ body {
   background-color: #fff;
 }
 
-.modal.active {
+.my-modal.active {
   top: 15%;
+  /* display: inline-block; */
 }
 
-.modal .header {
+.my-modal .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,7 +117,7 @@ body {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.modal .body {
+.my-modal .body {
   padding: 0.75rem;
 }
 
