@@ -94,6 +94,7 @@ todosContainer.addEventListener("mousemove", function (e) {
 let notStart = $.getElementById("not-start")
 let progress = $.getElementById("in-progress")
 let completed = $.getElementById("completed")
+let noStatus = $.getElementById("no_status")
 // function for => setObject Todo's Place + deleted span remove 
 function removeCloseSpan(e) {
     e.target.querySelectorAll(".todo").forEach((x) => {
@@ -107,9 +108,10 @@ function removeCloseSpan(e) {
     })
 }
 // add event drop and up function to 3 other container
+noStatus.addEventListener("drop", removeCloseSpan)
 notStart.addEventListener("drop", removeCloseSpan)
 progress.addEventListener("drop", removeCloseSpan)
-completed.addEventListener("drop", removeCloseSpan)
+completed.addEventListener("drop",removeCloseSpan)
 
 
 
